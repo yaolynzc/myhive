@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/metro.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../content/styles/admin.main.css" />
+      <link href="../media/css/pagination.css" rel="stylesheet" />
+    <style type="text/css">
+ 
+        
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <div id="divcreate">
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+                <div class="span8">
+                    <div id="tools" style="top: 35px; position: absolute; z-index: 100;">
+                        <div class="row">
+                            <label class="checkbox" style="color: red;">
+                                <input id="highway" type="checkbox">高速路
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox" style="color: #9900ff">
+                                <input id="arterial" type="checkbox">城市主路
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox" style="color: #666666">
+                                <input id="local" type="checkbox">普通道路
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox">
+                                <input id="range" type="checkbox" checked>任务范围
+                            </label>
+                        </div>
+                    </div>
+                    <div id="map" style="width: 100%; height: 320px"></div>
+                    <div id="search" style="top:5px;position:absolute;z-index:100;left:5px">
+                         
+                        <div class="form-search">
+                          <input id="keyword" type="text" class="input-medium search-query" placeholder="搜索定位">
+                          <!--<button type="submit" class="btn">Search</button>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="span4" style="margin-top:5px;">
+                    <div class="row">
+                        <blockquote>
+                            <p><strong>任务时间</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="row">
+                        <table id="Table1" class="table">
+                            <tr>
+                                <td style="width: 80px">
+                                    <label style="margin-top: 3px">开始时间：</label></td>
+                                <td>
+                                    <!--<li class="laydate-icon" id="start" style="width: 200px; list-style: none;"></li>-->
+                                    <!--<input  type="text" class="input" id="start" placeholder="开始日">-->
+                                    <label id="start" style="margin-top: 3px"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label style="margin-top: 3px">结束时间：</label></td>
+                                <td>
+                                    <!--<li class="laydate-icon" id="end" style="width: 200px; list-style: none;"></li>-->
+                                    <!--<input type="text" class="input" id="end" placeholder="截止日">-->
+                                    <label id="end" style="margin-top: 3px"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <blockquote>
+                            <p><strong>任务范围</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="row">
+                        <table id="list" class="table">
+                            <tr>
+                                <td style="width: 80px">
+                                    <label style="margin-top: 3px">任务里程</label></td>
+                                <td>
+                                    <label id="mileage"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 80px">
+                                    <label style="margin-top: 3px">是否双向</label></td>
+                                <td>
+                                    <!--<input id="isdouble" type="checkbox">-->
+                                    <label id="isdouble" style="margin-top: 3px">否</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <blockquote>
+                            <p><strong>任务人员</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="row">
+                        <table id="Table2" class="table">
+                            <tr>
+                                <td style="width: 80px;">
+                                    <label style="margin-top: 8px">作业员</label><input type="hidden" id="selid" />
+
+                                </td>
+                                <td>
+                                    <label id="selname" style="margin-top: 8px"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <blockquote>
+                            <p><strong>控制点</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="row">
+                        <table id="Table3" class="table">
+                            <tr>
+                                <td style="width: 80px">
+                                    <label style="margin-top: 3px">控制点间距</label></td>
+                                <td>
+                                    <!--<input id="disc" class="input-mini" type="text" placeholder="输入数字">-->
+                                    <label id="disc" style="margin-top: 3px"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+         <div class="form-actions navbar-fixed-bottom" style="padding-top:5px;padding-bottom:5px;text-align:center;">
+            <button type="button" id="submit" class="btn green" style="display:none;"><i class="icon-ok"></i>提交数据</button>
+           <button type="button" id="export" class="btn blue" style="display:none;"><i class="icon-share"></i>导出信息</button>
+            <button type="button" class="btn" id="cancel">返回</button>
+           
+        </div>
+    </div>
+
+    <!-- BEGIN JAVASCRIPTS -->
+    <script type="text/javascript">
+        var staticFileRoot = "http://localhost:4337";
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Content/layer/layer.js"></script>
+    <script src="../Content/laydate/laydate.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.numeric.js"></script>
+    <script type="text/javascript" src="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.ui.datapicker-zh-CN.js"></script>
+        <script type="text/javascript" src="../media/js/jquery.pagination.js"></script>
+    <script type="text/javascript" src="../content/scripts/admin.edit.js"></script>
+    <script src="js/outview.js"></script>
+
+
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+<!--  -->

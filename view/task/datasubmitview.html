@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/metro.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../content/styles/admin.main.css" />
+        <link rel="stylesheet" href="../Content/uploadify/uploadify.css" />
+    <style type="text/css">
+ 
+        
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+                <div class="control-group">
+                    <label class="control-label">数据编号：</label>
+                    <div class="controls">
+                       <label id="dcode"></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">存储编号：</label>
+                    <div class="controls">
+                       <label id="did"></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">轨迹文件：</label>
+                    <div class="controls">
+                      <!--  <input class="m-wrap middle" id="gps"  type="file" value=""/><span class="add-on" title="" id="preview"></span>
+                        <input type="hidden" value="" id="spath" />-->
+                         <label id="gps"></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">轨迹间距：</label>
+                    <div class="controls">
+                       <!--<input class="m-wrap small" id="distance"  type="text" value="16" />--><label id="distance">16米</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">数据路径：</label>
+                    <div class="controls">
+                         <!--<input class="m-wrap large" id="path"  type="text" value="" />-->
+                        <label id="path"></label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">备注说明：</label>
+                    <div class="controls">
+                        <!--<textarea class="m-wrap large" id="memo" rows="5"></textarea>-->
+                        <label id="memo"></label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    <!-- BEGIN JAVASCRIPTS -->
+    <script type="text/javascript">
+        var staticFileRoot = "http://localhost:4337";
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
+   
+    
+    <script src="../Content/layer/layer.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.numeric.js"></script>
+    <script type="text/javascript" src="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.ui.datapicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../content/uploadify/jquery.uploadify.js"></script>
+    <script type="text/javascript" src="../content/scripts/admin.edit.js"></script>
+    <script src="js/datasubmitview.js"></script>
+
+
+
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

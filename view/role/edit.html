@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    
+    <!-- 引入公共样式 -->
+    {% include "../inc/ecss.html" %}
+
+    <link rel="stylesheet" type="text/css" href="/static/assets/ztree/3.5.29/css/awesomeStyle/awesome.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/ztree/3.5.29/css/metro.css" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <form id="mainForm">
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>角色名：</label>
+                    <div class="controls">
+                        <input class="input-medium" data-val="true" data-val-required="角色名不能为空" data-val-regex="含有特殊字符，请输入中文、字母或数字"  data-val-regex-pattern="[a-zA-Z0-9\u4e00-\u9fa5]+" id="Name" name="Name" type="text" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">说明：</label>
+                    <div class="controls">
+                        <input class="input-large" id="Info" name="Info" type="text" value="" data-val="true" data-val-regex="含有特殊字符，请输入中文、英文、数字"  data-val-regex-pattern="[a-zA-Z0-9\u0391-\uFFE5-,.?:;!'(){}]+$" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Info" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                 <div class="control-group">
+                    <label class="control-label">是否激活：</label>
+                    <div class="controls">
+                        <input data-val="true" data-val-required="IsActive 字段是必需的。" id="IsActive" name="IsActive" type="checkbox" checked />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">权限：</label>
+                    <div class="controls">
+                       <ul id="module" class="ztree"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="height: 80px;"></div>
+        <div class="form-actions navbar-fixed-bottom">
+            <button type="button" id="submit" class="btn blue"><i class="icon-ok"></i>提交</button>
+            <button type="button" id="cancel" class="btn" >取消</button>
+        </div>
+    </form>
+
+    <!-- 引入公共js -->
+    {% include "../inc/ejs.html" %}
+
+    <!-- 引入当前页面js脚本  -->
+    <script type="text/javascript" src="/static/assets/ztree/3.5.29/js/jquery.ztree.all.min.js"></script>
+    <script type="text/javascript" src="/static/role/edit.js"></script>
+    
+</body>
+</html>

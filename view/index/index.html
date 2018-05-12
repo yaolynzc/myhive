@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- 页面头部 -->
+<head>
+    <meta charset="utf-8" />
+    <title>任务管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- 引入公共样式 -->
+    {% include "../inc/css.html" %}
+
+</head>
+<!-- 页面正文 -->
+<body class="fixed-top">
+    <!-- 引入页面公共头部 -->
+    {% include "../inc/header.html" %}
+
+    <!-- 页面正文容器 -->
+    <div class="page-container row-fluid">
+
+        <!-- 引入页面左侧菜单 -->
+        {% include "../inc/sidebar.html" %}
+
+        <!-- 容器内容 -->
+        <div class="page-content">
+            <!-- 引入页面portlet -->
+            {% include "../inc/portlet.html" %}
+
+            <div class="container-fluid">
+                <!-- 引入页面正文头部 -->
+                {% include "../inc/pheader.html" %}
+
+                <div class="p10 m10">
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <h4><i class="icon-reorder"></i>任务管理系统</h4>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"></a>
+                                <a href="#portlet-config" data-toggle="modal" class="config"></a>
+                                <a href="javascript:;" class="reload"></a>
+                                <a href="javascript:;" class="remove"></a>
+                            </div>
+                        </div>
+
+                        <div class="portlet-body">
+                            <h3></h3>
+                            <blockquote>
+                                <p>欢迎使用任务管理系统！</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portlet box red m10">
+                    <div class="portlet-title">
+                        <h4><i class="icon-reorder"></i>工作台</h4>
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <ul id="modulelist">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入公共尾部 -->
+    {% include "../inc/footer.html" %}
+
+    <!-- 引入公共js -->
+    {% include "../inc/js.html" %}
+
+    <!-- 引入当前页面js脚本  -->
+    <script type="text/javascript" src="/static/media/js/index.js"></script>
+    <script type="text/javascript" src="/static/message/message.js"></script>
+
+    <!-- 页面内js脚本 -->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            // 初始化加载功能菜单
+            main.init($("#navlist"));
+            Index.init();
+        });
+
+        $("#navigation").hide();
+        $(".sub").show();
+        $(".has-sub>a").each(function () {
+            $(this).css("background-color", "#313131");
+        });
+
+    </script>
+</body>
+</html>

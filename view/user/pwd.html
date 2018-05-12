@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    
+    <!-- 引入公共样式 -->
+    {% include "../inc/ecss.html" %}
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <form id="mainForm">
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+                <div class="control-group" id="divPwd">
+                    <label class="control-label"><span class="required">*</span>新密码：</label>
+                    <div class="controls">
+                        <input class="m-wrap small" data-val="true" data-val-required="密码是必需的" data-val-length-min="8" data-val-length="密码至少8位字符" id="password" name="password" type="password" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 40px;"></div>
+        <div class="form-actions navbar-fixed-bottom">
+            <button type="button" id="submit" class="btn blue"><i class="icon-ok"></i>提交</button>
+            <button type="button" id="cancel" class="btn" >取消</button>
+        </div>
+    </form>
+
+    <!-- 引入公共js -->
+    {% include "../inc/ejs.html" %}
+    
+    <!-- 引入当前页面js脚本  -->
+    <script src="/static/user/edit.js"></script>
+
+</body>
+</html>

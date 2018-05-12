@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/metro.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../content/styles/admin.main.css" />
+    <link rel="stylesheet" href="../Content/uploadify/uploadify.css" />
+    <style type="text/css">
+ 
+        
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <form id="mainForm">
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>存储编号：</label>
+                    <div class="controls">
+                       <input class="m-wrap middle" type="text" id="did" name="did" data-val="true" data-val-regex="含有特殊字符，请输入字母、数字"  data-val-regex-pattern="([a-zA-Z0-9]+)" value="" />
+                       <span class="help-inline"><span data-valmsg-for="did" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>轨迹文件：</label>
+                    <div class="controls">
+                        <input class="m-wrap middle" id="gps"  type="file" value=""/><span class="add-on" title="" id="preview"></span>
+                        <input type="hidden" value="" id="spath" />
+                    </div>
+                </div>
+                <div class="control-group" style="display:none">
+                    <label class="control-label">轨迹间距：</label>
+                    <div class="controls">
+                       <input class="m-wrap small" id="distance" name="distance" data-val="true" data-val-regex="含有特殊字符，请输入数字"  data-val-regex-pattern="([0-9]+)" type="text" value="16" />米
+                       <span class="help-inline"><span data-valmsg-for="distance" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>数据路径：</label>
+                    <div class="controls">
+                         <input class="m-wrap large" id="path" name="path" data-val="true" data-val-regex="含有特殊字符，请输入中文、字母、数字"  data-val-regex-pattern="([a-zA-Z0-9\u4e00-\u9fa5:\\]+)" type="text" value="" />
+                         <span class="help-inline"><span data-valmsg-for="path" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">备注说明：</label>
+                    <div class="controls">
+                        <textarea class="m-wrap large" id="memo" rows="3" name="memo" data-val="true" data-val-regex="含有特殊字符，请输入中文、英文、数字"  data-val-regex-pattern="([a-zA-Z0-9\u0391-\uFFE5-,.?:;!'(){}]+$)"></textarea>
+                        <span class="help-inline"><span data-valmsg-for="memo" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <div class="form-actions navbar-fixed-bottom">
+            <button type="button" id="submit" class="btn blue"><i class="icon-ok"></i>保存</button>
+            <button type="button" class="btn" id="cancel">取消</button>
+<!--            <div class="validation-summary-valid" data-valmsg-summary="true">
+               
+            </div>-->
+        </div>
+    </form>
+
+    <!-- BEGIN JAVASCRIPTS -->
+    <script type="text/javascript">
+        var staticFileRoot = "http://localhost:4337";
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
+   
+    
+    <script src="../Content/layer/layer.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.numeric.js"></script>
+    <script type="text/javascript" src="../assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="../content/scripts/jquery.ui.datapicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../content/uploadify/jquery.uploadify.js"></script>
+    <script type="text/javascript" src="../content/scripts/admin.edit.js"></script>
+    <script src="js/datasubmit.js"></script>
+
+
+
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

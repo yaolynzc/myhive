@@ -1,0 +1,47 @@
+.node_name {
+	font-size: 14px;
+	margin-left: 2px;
+}
+.ztree li a {
+	margin-bottom: 3px;
+}
+.ztree, .ztree * {
+	background: white;
+}
+.ztree, .ztree li a,
+.ztree li span.button::before,
+.ztree li span.button.ico_open::before,
+.ztree li span.button.ico_close::before,
+.ztree li span.button.ico_docu::before,
+span.tmpzTreeMove_arrow::before {
+	color: #444;
+}
+.ztree li a.curSelectedNode {
+	background-color: gray;
+	color: darkred;
+}
+
+.ztree li span.button.chk.checkbox_false_full_focus::before {
+  content: "\f096";
+  color:  darkred;
+}
+
+.ztree li span.button.chk.checkbox_false_part_focus::before {
+  content: "\f096";
+  color:  darkred;
+}
+
+.ztree li span.button.chk.checkbox_true_full_focus::before {
+  content: "\f046";
+  color: darkred;
+}
+
+.ztree li span.button.chk.checkbox_true_part_focus::before {
+  content: "\f046";
+  color:  darkred;
+}
+
+/*设置checkbox鼠标悬停样式为默认箭头*/ 
+.ztree li span.button.chk {
+  cursor: default;
+}

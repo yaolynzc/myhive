@@ -1,0 +1,24 @@
+/*datasub.html and datalook.html 共用datasublook.css*/
+
+.bor_btm{border-bottom: 2px solid #CDAD00;}
+#datasub_btn{ margin-left: 10px;padding:0;outline:none; list-style-type:none;border: 0;height: 30px;width: 60px;background: #35aa47;color: #fff;}
+#datasub_btn:hover,#datasub_btn:focus,#datasub_btn:active{background: #1d943b !important;}
+#datasub_return{margin-left: 10px; padding:0; border: 0;outline:none; list-style-type:none;height: 30px;width: 60px;background: #3B3B3B;color: #fff;}
+#datasub_return:hover,#datasub_return:focus,#datasub_return:active{background: #000 !important;}
+#taskid{font-size:16px;color: #454545;margin-right: 20px;}
+#taskname{font-size:16px;color: #454545;}
+#listdiv{margin-top: 10px;}
+#divlist{min-width: 1310px;}
+
+#Tlist a.btn{margin-right: 10px !important;}
+
+/*cover遮罩层 BEGIN*/
+.cover{position: absolute; top: 0px;left: 0px;height: 100%;width: 100%; background: #000;filter: alpha(opacity=50);opacity: 0.5;}
+.Pop_ups{width:440px;background:#fff;}
+.datamc{height:40px;width:100%; line-height:40px;border-bottom:2px solid #e0e0e0;font-size:20px;text-indent:15px;margin-bottom: 40px;}
+.datamc>a{ color:red;cursor:pointer; margin-left:310px;}
+.inp_text{margin: 20px 30px;}
+.inp_text>input{margin-top: 8px;width: 72%;}
+.subandbtn{margin-top: 20px;}
+.Pop_ups textarea{width: 300px;height: 140px;}
+/*cover遮罩层 END*/

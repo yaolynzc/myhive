@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- 页面头部 -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    
+    <!-- 引入公共样式 -->
+    {% include "../inc/ecss.html" %}
+
+</head>
+<!-- 页面正文-->
+<body>
+    <form id="mainForm">
+        <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+            <div class="row-fluid">
+
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>用户名：</label>
+                    <div class="controls">
+                        <input class="input-small" data-val="true" data-val-required="用户名不能为空" data-val-regex="含有特殊字符，请输入字母、数字"  data-val-regex-pattern="([a-zA-Z0-9]+)" id="LoginID" name="LoginID" type="text" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="LoginID" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group" id="divPwd">
+                    <label class="control-label"><span class="required">*</span>密码：</label>
+                    <div class="controls">
+                        <input class="input-small" data-val="true" data-val-required="密码是必需的" data-val-length-min="8" data-val-length="密码至少8位字符" id="Password" name="Password" type="password" value="flame$88" />
+                        <span class="help-inline">默认密码：flame$88<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group" id="divName">
+                    <label class="control-label"><span class="required">*</span>姓名：</label>
+                    <div class="controls">
+                        <input class="input-small" data-val="true" data-val-required="姓名不能为空" data-val-regex="请输入中文或字母"  data-val-regex-pattern="([a-zA-Z\u4e00-\u9fa5]+)" id="Name" name="Name" type="text" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">手机：</label>
+                    <div class="controls">
+                        <input class="input-small" data-val="true" data-val-regex="不是有效的手机号码" data-val-regex-pattern="^[1-9]{1}\d{10}$" id="Mobile" name="Mobile" type="text" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">邮箱：</label>
+                    <div class="controls">
+                        <input class="input-small" data-val="true" data-val-regex="邮箱地址无效" data-val-regex-pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}" id="Email" name="Email" type="text" value="" />
+                        <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label"><span class="required">*</span>角色：</label>
+                    <div class="controls">
+                        <label>
+                            <select class="form-control" id="Roles" name="Roles" data-val="true" data-val-required="请选择角色">
+                            </select>
+                            <span class="help-inline"><span class="field-validation-valid" data-valmsg-for="Roles" data-valmsg-replace="true"></span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">是否激活：</label>
+                    <div class="controls">
+                        <input checked="checked" data-val="true" data-val-required="IsActive 字段是必需的。" id="IsActive" name="IsActive" type="checkbox" value="1" /><input name="IsActive" type="hidden" value="0" />
+                    </div>
+                </div>
+
+                <div style="display: none;" id="jobstips">
+                    <label style="color:red;"></label>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+        <div class="form-actions navbar-fixed-bottom">
+            <button type="button" id="submit" class="btn blue"><i class="icon-ok"></i>提交</button>
+            <button type="button" id="cancel" class="btn" >取消</button>
+        </div>
+    </form>
+
+    <!-- 引入公共js -->
+    {% include "../inc/ejs.html" %}
+
+    <!-- 引入当前页面js脚本  -->
+    <script type="text/javascript" src="/static/user/edit.js"></script>
+
+</body>
+</html>

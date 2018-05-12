@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "myhive",
+    "script": "production.js",
+    "cwd": "D:\dev\mean\github\myhive",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

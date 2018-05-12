@@ -1,0 +1,10 @@
+
+.bor_btm{border-bottom: 2px solid #CDAD00;}
+#datasub_btn{ margin-left: 10px;padding:0;outline:none; list-style-type:none;border: 0;height: 30px;width: 60px;background: #35aa47;color: #fff;}
+#datasub_btn:hover,#datasub_btn:focus,#datasub_btn:active{background: #1d943b !important;}
+#datasub_return{margin-left: 10px; padding:0; border: 0;outline:none; list-style-type:none;height: 30px;width: 60px;background: #3B3B3B;color: #fff;}
+#datasub_return:hover,#datasub_return:focus,#datasub_return:active{background: #000 !important;}
+#taskid{font-size:16px;color: #454545;margin-right: 20px;}
+#taskname{font-size:16px;color: #454545;}
+#listdiv{margin-top: 10px;}
+#divlist{min-width: 1200px;}

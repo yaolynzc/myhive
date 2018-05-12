@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- 页面头部 -->
+<head>
+    <meta charset="utf-8" />
+    <title>任务管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- 引入公共样式 -->
+    {% include "../inc/css.html" %}
+
+</head>
+<!-- 页面正文 -->
+<body class="fixed-top">
+    <!-- 引入页面公共头部 -->
+    {% include "../inc/header.html" %}
+
+    <!-- 页面正文容器 -->
+    <div class="page-container row-fluid">
+
+        <!-- 引入页面左侧菜单 -->
+        {% include "../inc/sidebar.html" %}
+
+        <!-- 容器内容 -->
+        <div class="page-content">
+            <!-- 引入页面portlet -->
+            {% include "../inc/portlet.html" %}
+            
+            <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+                         <div id="tools1" style="top: 50px; position: absolute; z-index: 100;">
+                        <div class="row">
+                            <label class="checkbox" style="color: red;">
+                                <input id="highway1" type="checkbox">高速路
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox" style="color: #9900ff">
+                                <input id="arterial1" type="checkbox">城市主路
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox" style="color: #666666">
+                                <input id="local1" type="checkbox">普通道路
+                            </label>
+                        </div>
+                        <!--<div class="row">
+                            <label class="checkbox">
+                                <input id="range" type="checkbox" checked />任务范围
+                            </label>
+                        </div>-->
+                    </div>
+                    <div id="map" style="width: 100%; height: 320px"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入公共尾部 -->
+    {% include "../inc/footer.html" %}
+
+    <!-- 引入公共js -->
+    {% include "../inc/js.html" %}
+
+    <!-- 引入当前页面js脚本  -->
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=a97ce823dea7ee2225961633da6b5cc3"></script>
+    <script type="text/javascript" src="/static/media/js/coordtrans.js"></script>
+    <script type="text/javascript" src="/static/main/main.js"></script>
+    <script type="text/javascript" src="/static/message/message.js"></script>
+
+    <!-- 页面内js脚本 -->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            // 初始化加载功能菜单
+            main.init($("#navlist"));
+            //Index.init(); 
+        });
+
+        $("#navigation").hide();
+        $(".sub").show();
+        $(".has-sub>a").each(function () {
+            $(this).css("background-color", "#313131");
+        });
+    </script>
+</body>
+</html>

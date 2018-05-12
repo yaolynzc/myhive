@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>任务管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- 引入公共样式 -->
+    {% include "../inc/css.html" %}
+    
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+    <!-- 引入页面公共头部 -->
+    {% include "../inc/header.html" %}
+
+    <div class="page-container row-fluid">
+        <!-- 引入页面左侧菜单 -->
+        {% include "../inc/header.html" %}
+
+        <!-- 引入页面portlet -->
+        {% include "../inc/portlet.html" %}
+
+            <div class="container-fluid">
+                <!-- 引入页面正文头部 -->
+                {% include "../inc/pheader.html" %}
+
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div >
+                                
+                                <label>
+                                    <span>项目：</span>
+                                    <select id="project" name="project">
+
+                                    </select>
+                                </label>
+                            </div>
+ 
+                    </div>
+                    <div class="span8">
+
+                    </div>
+                </div>
+
+                <div class="alert">
+                    <button class="close" data-dismiss="alert"></button>
+                    <strong>任务信息相关：</strong>
+                    查看、处理相关任务！
+                </div>
+                <div id="loading" class="loading"  style="display:none">
+                    <img src="../media/image/loading3.gif" />
+                </div>
+                <div id="nodata" class="loading"  style="display:none">
+                    <img src="../media/image/nodata.png" />
+                </div>
+                <div id="mainForm">
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>任务编号
+                                </th>
+                                <th>所属项目
+                                </th>
+                                <th>工期
+                                </th>
+                                <th>发布时间
+                                </th>
+                                <th>当前状态
+                                </th>
+                                <th>操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="Tlist">
+                            <tr>
+                            <td>ZHT20161117001
+                                </td>
+                                <td>武汉机场路线高精数据
+                                </td>
+                                <td>2016/11/17-2016/12/17
+                                </td>
+
+                                <td>未分配
+                                </td>
+                                <td> <a class="btn mini purple" title="创建任务" name="create"><i class="icon-edit"></i>创建任务</a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="pagination" class="dataTables_paginate paging_bootstrap pagination">
+
+                    <!--MvcPager 1.5 for ASP.NET MVC 3.0 © 2009-2011 Webdiyer (http://www.webdiyer.com)
+                    <div class="pages"><a disabled="disabled">首页</a>&nbsp;&nbsp;<a disabled="disabled">上一页</a>&nbsp;&nbsp;1&nbsp;&nbsp;<a href='/Account/User/Index?pageIndex=2'>2</a>&nbsp;&nbsp;<a href='/Account/User/Index?pageIndex=2'>下一页</a>&nbsp;&nbsp;<a href='/Account/User/Index?pageIndex=2'>尾页</a><span>总条数: 13</span></div>
+                    MvcPager 1.5 for ASP.NET MVC 3.0 © 2009-2011 Webdiyer (http://www.webdiyer.com)-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- 引入公共尾部 -->
+    {% include "../inc/footer.html" %}
+
+    <!-- 引入公共js -->
+    {% include "../inc/js.html" %}
+
+    <!-- 引入当前页面js脚本  -->
+    <script src="/static/js/config.js"></script>
+    <script src="/static/task/out.js"></script>
+</body>
+</html>
